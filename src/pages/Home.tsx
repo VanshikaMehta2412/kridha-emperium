@@ -12,20 +12,21 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email) {
-      setSubscribed(true);
-      setEmail('');
-      setTimeout(() => setSubscribed(false), 5000);
-    }
-  };
+ const handleSubscribe = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (email) {
+    setSubscribed(true);
+    setEmail('');
+    setTimeout(() => setSubscribed(false), 5000);
+  }
+};
 
   return (
     <>
       <SEO
          title="Luxury Home Decor & Modern Home Decor"
-         description="Discover luxury home decor and modern home decor pieces at Kridha Emperium. Explore elegant furniture, decorative lighting, wall decor and premium home decor for stylish living spaces."/>
+         description="Discover luxury home decor and modern home decor pieces at Kridha Imperial Homes. Explore elegant furniture, decorative lighting, wall decor and premium home decor for stylish living spaces."/>
       
       {/* Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-0 min-h-[85vh]">
