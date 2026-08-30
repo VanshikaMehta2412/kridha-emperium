@@ -23,7 +23,9 @@ export default function Home() {
 
   return (
     <>
-      <SEO title="Luxury Home Décor" description="Discover timeless home décor pieces designed to bring sophistication, warmth and character to every corner of your home." />
+      <SEO
+         title="Luxury Home Decor & Modern Home Decor"
+         description="Discover luxury home decor and modern home decor pieces at Kridha Emperium. Explore elegant furniture, decorative lighting, wall decor and premium home decor for stylish living spaces."/>
       
       {/* Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-0 min-h-[85vh]">
@@ -34,11 +36,11 @@ export default function Home() {
               <span className="text-xs uppercase tracking-[0.4em] text-amber-700 font-semibold">Exclusive Collection 2024</span>
             </div>
             <h1 className="font-serif text-5xl lg:text-6xl leading-[1.1] mb-8 text-stone-900">
-              Transform Your Space<br/>With Imperial Elegance
-            </h1>
+  Luxury Home Decor<br/>For Modern Homes
+</h1>
             <p className="text-stone-500 text-lg mb-10 leading-relaxed max-w-lg">
-              Discover timeless home décor pieces designed to bring sophistication, warmth, and character to every corner of your refined dwelling.
-            </p>
+  Discover luxury home decor and modern home decor pieces designed to bring sophistication, warmth, and character to every corner of your home.
+</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/products" 
@@ -135,7 +137,7 @@ export default function Home() {
           <div className="h-[500px] md:h-auto">
             <img 
               src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" 
-              alt="The Imperial Collection" 
+              alt="Luxury home decor Imperial Collection" 
               className="w-full h-full object-cover"
             />
           </div>
@@ -143,8 +145,8 @@ export default function Home() {
             <span className="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-4 block">Premium Selection</span>
             <h2 className="font-serif text-4xl md:text-5xl mb-6">The Imperial Collection</h2>
             <p className="text-stone-400 leading-relaxed mb-10 max-w-md">
-              A meticulously curated selection of our finest pieces. Featuring hand-crafted furniture, artisanal décor, and exclusive designs that define the essence of modern luxury.
-            </p>
+  A meticulously curated selection of luxury home decor pieces, featuring hand-crafted furniture, decorative lighting, artisanal wall decor, and exclusive designs for modern homes.
+</p>
             <Link 
               to="/products" 
               className="self-start border border-white px-8 py-4 uppercase tracking-widest text-sm hover:bg-white hover:text-stone-900 transition-colors"
