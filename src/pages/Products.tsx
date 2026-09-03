@@ -134,7 +134,11 @@ export default function Products() {
             : 'Home Decor Products'}
           </h1>
           <p className="text-stone-600 max-w-2xl mx-auto">
-            Explore luxury home decor products and elegant home decor items designed to bring sophistication, warmth and character to every corner of your home.
+          {selectedCategory === "Furniture"
+          ? "Explore luxury furniture and luxury home furniture designed to bring elegance, comfort and sophistication to every corner of your home."
+          : selectedCategory === "Lighting"
+          ? "Discover luxury wall lights, decorative lighting and modern home lighting designed to create an elegant and welcoming atmosphere."
+          : "Explore luxury home decor products and elegant home decor items designed to bring sophistication, warmth and character to every corner of your home."}
           </p>
         </div>
       </div>
