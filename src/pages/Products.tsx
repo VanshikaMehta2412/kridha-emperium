@@ -118,16 +118,23 @@ export default function Products() {
 
   return (
     <>
-      <SEO title={selectedCategory || "All Products"} description="Browse our complete collection of luxury home décor." />
+      <SEO
+        title={selectedCategory ? `${selectedCategory} - Luxury Home Decor Products` : "Home Decor Products"}
+        description="Explore luxury home decor products and home decor items at Kridha Imperial Homes. Discover elegant furniture, lighting, wall decor and premium pieces for stylish homes."
+      />
       
       {/* Page Header */}
       <div className="bg-stone-100 py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-3xl md:text-5xl text-stone-900 mb-4">
-            {selectedCategory ? selectedCategory : searchParam ? `Search Results for "${searchParam}"` : 'All Collections'}
+            {selectedCategory
+            ? `Luxury ${selectedCategory}`
+            : searchParam
+            ? `Search Results for "${searchParam}"`
+            : 'Home Decor Products'}
           </h1>
           <p className="text-stone-600 max-w-2xl mx-auto">
-            Discover timeless home décor pieces designed to bring sophistication, warmth and character to every corner of your home.
+            Explore luxury home decor products and elegant home decor items designed to bring sophistication, warmth and character to every corner of your home.
           </p>
         </div>
       </div>
