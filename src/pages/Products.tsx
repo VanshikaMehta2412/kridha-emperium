@@ -5,6 +5,7 @@ import ProductCard from '../components/ProductCard';
 import { products, getCategories, Category } from '../data/products';
 import { Filter, X, ChevronDown } from 'lucide-react';
 import { cn } from '../lib/utils';
+import { Helmet } from "react-helmet-async";
 
 type SortOption = 'price-low-high' | 'price-high-low' | 'newest' | 'rating' | 'popularity';
 
@@ -119,19 +120,67 @@ export default function Products() {
   return (
     <>
       <SEO
-        title={selectedCategory ? `${selectedCategory} - Luxury Home Decor Products` : "Home Decor Products"}
-        description="Explore luxury home decor products and home decor items at Kridha Imperial Homes. Discover elegant furniture, lighting, wall decor and premium pieces for stylish homes."
+      title={
+      selectedCategory
+      ? `${selectedCategory} - Luxury Home Decor Products`
+      : "Home Decor Products"
+      }
+      description="Explore luxury home decor products and home decor items at Kridha Imperial Homes. Discover elegant furniture, lighting, wall decor and premium pieces for stylish homes."
       />
+      <Helmet>
+      <script type="application/ld+json">
+      {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": selectedCategory
+        ? `Luxury ${selectedCategory}`
+        : "Home Decor Products",
+      "description": "Explore luxury home decor products and elegant home decor items at Kridha Imperial Homes.",
+      "url": `https://kridha-emperium.vercel.app/products${
+        selectedCategory
+          ? `?category=${encodeURIComponent(selectedCategory)}`
+          : ""
+        }`
+        })}
+      </script>
+
+      <script type="application/ld+json">
+      {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kridha-emperium.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": selectedCategory
+            ? `Luxury ${selectedCategory}`
+            : "Home Decor Products",
+          "item": `https://kridha-emperium.vercel.app/products${
+            selectedCategory
+              ? `?category=${encodeURIComponent(selectedCategory)}`
+              : ""
+          }`
+        }
+      ]
+      })}
+      </script>
+      </Helmet>
       
       {/* Page Header */}
       <div className="bg-stone-100 py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-3xl md:text-5xl text-stone-900 mb-4">
-            {selectedCategory
-            ? `Luxury ${selectedCategory}`
-            : searchParam
-            ? `Search Results for "${searchParam}"`
-            : 'Home Decor Products'}
+          {selectedCategory
+          ? `Luxury ${selectedCategory}`
+          : searchParam
+          ? `Search Results for "${searchParam}"`
+          : "Home Decor Products"}
           </h1>
           <p className="text-stone-600 max-w-2xl mx-auto">
           {selectedCategory === "Furniture"
@@ -140,8 +189,8 @@ export default function Products() {
           ? "Discover luxury wall lights, decorative lighting and modern home lighting designed to create an elegant and welcoming atmosphere."
           : selectedCategory === "Wall Décor"
           ? "Explore luxury wall decor, elegant wall design and luxury wall art to add sophistication and character to your home."
-          : "Explore luxury home decor products and elegant home decor items designed to bring sophistication, warmth and character to every corner of your home."}
-          </p>
+          : "Explore luxury home decor products, premium home decor products and elegant home decor items designed to bring sophistication, warmth and character to every corner of your home."}
+        </p>
         </div>
       </div>
 
