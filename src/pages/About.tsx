@@ -4,7 +4,10 @@ import SEO from '../components/SEO';
 export default function About() {
   return (
     <>
-      <SEO title="About Us" description="Learn about Kridha Imperial Homes, our story, and our design philosophy." />
+      <SEO
+      title="Luxury Home Decor Brand in India"
+      description="Learn about Kridha Imperial Homes, a premium home decor brand in India offering elegant and luxury home decor inspired by timeless design."
+      />
       
       {/* Hero Section */}
       <div className="relative h-[40vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
@@ -16,7 +19,9 @@ export default function About() {
           />
         </div>
         <div className="relative z-10 text-center px-4">
-          <h1 className="font-serif text-4xl md:text-6xl text-white mb-4">Our Story</h1>
+          <h1 className="font-serif text-4xl md:text-6xl text-white mb-4">
+          Luxury Home Decor Brand in India
+          </h1>
           <p className="text-stone-200 tracking-widest uppercase text-sm md:text-base">Where Timeless Elegance Meets Your Home</p>
         </div>
       </div>
@@ -34,7 +39,7 @@ export default function About() {
           <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6 text-center">Our Design Philosophy</h2>
           <div className="w-16 h-px bg-amber-700 mx-auto mb-8"></div>
           <p className="text-stone-600 text-lg leading-relaxed text-center mb-8">
-            At Kridha Imperial Homes, we believe that your living space should be a reflection of your finest tastes. Our philosophy is rooted in the pursuit of timeless elegance, blending classic architectural proportions with modern sensibilities. We curate pieces that do more than fill a room; they elevate it, bringing sophistication, warmth, and unmistakable character to every corner.
+            At Kridha Imperial Homes, we believe that your living space should be a reflection of your finest tastes. As a premium home decor brand in India, our philosophy is rooted in the pursuit of timeless elegance, blending classic architectural proportions with modern sensibilities. We curate pieces that do more than fill a room; they elevate it, bringing sophistication, warmth, and unmistakable character to every corner.
           </p>
           <img 
             src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" 
