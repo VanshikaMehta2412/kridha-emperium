@@ -138,6 +138,8 @@ export default function Products() {
           ? "Explore luxury furniture and luxury home furniture designed to bring elegance, comfort and sophistication to every corner of your home."
           : selectedCategory === "Lighting"
           ? "Discover luxury wall lights, decorative lighting and modern home lighting designed to create an elegant and welcoming atmosphere."
+          : selectedCategory === "Wall Décor"
+          ? "Explore luxury wall decor, elegant wall design and luxury wall art to add sophistication and character to your home."
           : "Explore luxury home decor products and elegant home decor items designed to bring sophistication, warmth and character to every corner of your home."}
           </p>
         </div>
