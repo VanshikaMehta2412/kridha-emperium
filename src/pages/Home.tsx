@@ -4,6 +4,7 @@ import SEO from '../components/SEO';
 import ProductCard from '../components/ProductCard';
 import { getCategories, getFeaturedProducts } from '../data/products';
 import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 export default function Home() {
   const categories = getCategories();
@@ -28,6 +29,17 @@ export default function Home() {
          title="Luxury Home Decor & Modern Home Decor"
          description="Discover luxury home decor and modern home decor pieces at Kridha Imperial Homes. Explore elegant furniture, decorative lighting, wall decor and premium home decor for stylish living spaces."/>
       
+      <Helmet>
+      <script type="application/ld+json">
+      {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kridha Imperial Homes",
+      "url": "https://kridha-emperium.vercel.app/"
+      })}
+      </script>
+      </Helmet>
+      
       {/* Hero Section */}
       <section className="grid grid-cols-1 lg:grid-cols-12 gap-0 min-h-[85vh]">
         <div className="lg:col-span-7 flex flex-col justify-center px-8 md:px-16 relative bg-[#F9F7F2] py-20 lg:py-0">
@@ -37,11 +49,11 @@ export default function Home() {
               <span className="text-xs uppercase tracking-[0.4em] text-amber-700 font-semibold">Exclusive Collection 2024</span>
             </div>
             <h1 className="font-serif text-5xl lg:text-6xl leading-[1.1] mb-8 text-stone-900">
-  Luxury Home Decor<br/>For Modern Homes
-</h1>
+            Luxury Home Decor<br/>For Modern Homes
+            </h1>
             <p className="text-stone-500 text-lg mb-10 leading-relaxed max-w-lg">
-  Discover luxury home decor and modern home decor pieces designed to bring sophistication, warmth, and character to every corner of your home.
-</p>
+            Discover luxury home decor and modern home decor pieces at Kridha Imperial Homes. Explore luxury home decor products designed to bring sophistication, warmth, and character to every corner of your home.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
                 to="/products" 
@@ -146,8 +158,8 @@ export default function Home() {
             <span className="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-4 block">Premium Selection</span>
             <h2 className="font-serif text-4xl md:text-5xl mb-6">The Imperial Collection</h2>
             <p className="text-stone-400 leading-relaxed mb-10 max-w-md">
-  A meticulously curated selection of luxury home decor pieces, featuring hand-crafted furniture, decorative lighting, artisanal wall decor, and exclusive designs for modern homes.
-</p>
+            A meticulously curated selection of luxury home decor pieces and premium home decor products, featuring hand-crafted furniture, decorative lighting, artisanal wall decor, and exclusive designs for modern homes.
+            </p>
             <Link 
               to="/products" 
               className="self-start border border-white px-8 py-4 uppercase tracking-widest text-sm hover:bg-white hover:text-stone-900 transition-colors"
