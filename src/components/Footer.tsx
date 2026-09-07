@@ -26,7 +26,7 @@ export default function Footer() {
         <ul className="text-[11px] space-y-3 uppercase tracking-widest text-stone-600">
           <li><Link to="/products?category=Lighting" className="hover:text-amber-700">Lighting & Chandeliers</Link></li>
           <li><Link to="/products?category=Furniture" className="hover:text-amber-700">Bespoke Furniture</Link></li>
-          <li><Link to="/products?category=Wall Decor" className="hover:text-amber-700">Wall Décor & Art</Link></li>
+          <li><Link to="/products?category=Wall%20Décor" className="hover:text-amber-700">Wall Décor & Art</Link></li>
           <li><Link to="/products" className="hover:text-amber-700">All Products</Link></li>
         </ul>
       </div>
@@ -36,6 +36,7 @@ export default function Footer() {
         <ul className="text-[11px] space-y-3 uppercase tracking-widest text-stone-600">
           <li><Link to="/shipping-returns" className="hover:text-amber-700">Shipping & Returns</Link></li>
           <li><Link to="/privacy-policy" className="hover:text-amber-700">Privacy Policy</Link></li>
+          <li><Link to="/terms-conditions" className="hover:text-amber-700">Terms & Conditions</Link></li>
           <li><Link to="/faq" className="hover:text-amber-700">FAQ & Support</Link></li>
           <li><Link to="/contact" className="hover:text-amber-700">Contact Us</Link></li>
         </ul>

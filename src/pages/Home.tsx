@@ -81,7 +81,12 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-serif text-stone-900">03</span>
-              <span className="text-[10px] uppercase tracking-widest text-stone-400 mt-1">Global Shipping</span>
+              <Link 
+              to="/shipping-returns"
+              className="text-[10px] uppercase tracking-widest text-stone-400 mt-1 hover:text-amber-700 transition-colors"
+              >
+              Global Shipping
+              </Link>
             </div>
           </div>
         </div>
@@ -97,8 +102,8 @@ export default function Home() {
               <p className="text-stone-600 text-sm mb-6">Hand-crafted with heritage wood and premium Italian velvet for unparalleled comfort and class.</p>
               <div className="flex justify-between items-center">
                 <span className="text-lg font-medium text-stone-900">₹24,999</span>
-                <Link to="/products" className="text-[10px] uppercase tracking-tighter font-bold border-b border-stone-800 pb-1 text-stone-900 hover:text-amber-700">
-                  View Product Details
+                <Link to="/product/f-1" className="text-[10px] uppercase tracking-tighter font-bold border-b border-stone-800 pb-1 text-stone-900 hover:text-amber-700">
+                View Product Details
                 </Link>
               </div>
             </div>

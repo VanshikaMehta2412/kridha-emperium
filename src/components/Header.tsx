@@ -92,6 +92,8 @@ export default function Header() {
             </div>
 
             <NavLink to="/about" className={navLinkClasses}>About</NavLink>
+            <NavLink to="/faq" className={navLinkClasses}>FAQ</NavLink>
+            <NavLink to="/contact" className={navLinkClasses}>Contact</NavLink>
           </nav>
 
           {/* Logo */}

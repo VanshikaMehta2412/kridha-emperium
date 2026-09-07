@@ -135,7 +135,7 @@ export default function Products() {
       ? "Discover luxury wall lights, decorative lighting and modern home lighting at Kridha Imperial Homes. Explore elegant lighting pieces for stylish and welcoming interiors."
       : selectedCategory === "Wall Décor"
       ? "Explore luxury wall decor, elegant wall design and luxury wall art at Kridha Imperial Homes. Discover modern wall decor and decorative wall art for sophisticated interiors."
-      : "Explore luxury home decor products and elegant home decor items at Kridha Imperial Homes. Discover premium home decor products, furniture, lighting and wall decor for stylish homes."
+      :"Explore luxury home decor products and elegant home decor items at Kridha Imperial Homes. Discover premium home decor products, furniture, lighting and wall decor for stylish homes."
   }
 />
 
@@ -271,29 +271,43 @@ export default function Products() {
               </div>
 
               {/* Categories */}
-              <div>
-                <h3 className="text-sm font-semibold text-stone-900 uppercase tracking-wider mb-4 border-b border-stone-200 pb-2">Categories</h3>
-                <ul className="space-y-3">
-                  <li>
-                    <button 
-                      onClick={() => handleCategoryChange(null)}
-                      className={cn("text-sm hover:text-amber-700 transition-colors text-left w-full", selectedCategory === null ? "text-amber-700 font-medium" : "text-stone-600")}
-                    >
-                      All Products
-                    </button>
-                  </li>
-                  {categories.map(cat => (
-                    <li key={cat.id}>
-                      <button 
-                        onClick={() => handleCategoryChange(cat.name)}
-                        className={cn("text-sm hover:text-amber-700 transition-colors text-left w-full", selectedCategory === cat.name ? "text-amber-700 font-medium" : "text-stone-600")}
-                      >
-                        {cat.name}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+<div>
+  <h3 className="text-sm font-semibold text-stone-900 uppercase tracking-wider mb-4 border-b border-stone-200 pb-2">
+    Categories
+  </h3>
+
+  <ul className="space-y-3">
+    <li>
+      <Link
+        to="/products"
+        className={cn(
+          "text-sm hover:text-amber-700 transition-colors",
+          selectedCategory === null
+            ? "text-amber-700 font-medium"
+            : "text-stone-600"
+        )}
+      >
+        All Products
+      </Link>
+    </li>
+
+    {categories.map(cat => (
+      <li key={cat.id}>
+        <Link
+          to={`/products?category=${encodeURIComponent(cat.name)}`}
+          className={cn(
+            "text-sm hover:text-amber-700 transition-colors",
+            selectedCategory === cat.name
+              ? "text-amber-700 font-medium"
+              : "text-stone-600"
+          )}
+        >
+          {cat.name}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
 
               {/* Price Filter */}
               <div>
@@ -426,23 +440,35 @@ export default function Products() {
                 <h3 className="text-sm font-semibold text-stone-900 uppercase tracking-wider mb-4 border-b border-stone-200 pb-2">Categories</h3>
                 <ul className="space-y-4">
                   <li>
-                    <button 
-                      onClick={() => handleCategoryChange(null)}
-                      className={cn("text-base w-full text-left", selectedCategory === null ? "text-amber-700 font-medium" : "text-stone-600")}
-                    >
-                      All Products
-                    </button>
-                  </li>
+  <Link
+    to="/products"
+    onClick={() => setIsMobileFiltersOpen(false)}
+    className={cn(
+      "text-base",
+      selectedCategory === null
+        ? "text-amber-700 font-medium"
+        : "text-stone-600"
+    )}
+  >
+    All Products
+  </Link>
+</li>
                   {categories.map(cat => (
-                    <li key={cat.id}>
-                      <button 
-                        onClick={() => handleCategoryChange(cat.name)}
-                        className={cn("text-base w-full text-left", selectedCategory === cat.name ? "text-amber-700 font-medium" : "text-stone-600")}
-                      >
-                        {cat.name}
-                      </button>
-                    </li>
-                  ))}
+  <li key={cat.id}>
+    <Link
+      to={`/products?category=${encodeURIComponent(cat.name)}`}
+      onClick={() => setIsMobileFiltersOpen(false)}
+      className={cn(
+        "text-base",
+        selectedCategory === cat.name
+          ? "text-amber-700 font-medium"
+          : "text-stone-600"
+      )}
+    >
+      {cat.name}
+    </Link>
+  </li>
+))}
                 </ul>
               </div>
 

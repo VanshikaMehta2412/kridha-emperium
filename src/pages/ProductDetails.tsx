@@ -85,7 +85,7 @@ export default function ProductDetails() {
       },
       "offers": {
         "@type": "Offer",
-        "url": `https://kridha-emperium.vercel.app/products/${product.id}`,
+        "url": `https://kridha-emperium.vercel.app/product/${product.id}`,
         "priceCurrency": "INR",
         "price": product.price,
         "availability":
@@ -125,7 +125,7 @@ export default function ProductDetails() {
           "@type": "ListItem",
           "position": 4,
           "name": product.name,
-          "item": `https://kridha-emperium.vercel.app/products/${product.id}`
+          "item": `https://kridha-emperium.vercel.app/product/${product.id}`
         }
       ]
     })}
