@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 import ProductCard from '../components/ProductCard';
 import { products, getRelatedProducts } from '../data/products';
 import { useCartStore, useWishlistStore } from '../store/useStore';
@@ -64,8 +65,73 @@ export default function ProductDetails() {
 
   return (
     <>
-      <SEO title={product.name} description={product.shortDescription} />
+      <SEO
+      title={`${product.name} | Luxury ${product.category}`}
+      description={product.shortDescription}
+      />
       
+      <Helmet>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": product.name,
+      "description": product.description,
+      "image": allImages,
+      "sku": product.sku,
+      "brand": {
+        "@type": "Brand",
+        "name": "Kridha Imperial Homes"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": `https://kridha-emperium.vercel.app/products/${product.id}`,
+        "priceCurrency": "INR",
+        "price": product.price,
+        "availability":
+          product.availability === "In Stock"
+            ? "https://schema.org/InStock"
+            : product.availability === "Few Left"
+            ? "https://schema.org/LimitedAvailability"
+            : "https://schema.org/OutOfStock"
+      }
+    })}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kridha-emperium.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://kridha-emperium.vercel.app/products"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": product.category,
+          "item": `https://kridha-emperium.vercel.app/products?category=${encodeURIComponent(product.category)}`
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": product.name,
+          "item": `https://kridha-emperium.vercel.app/products/${product.id}`
+        }
+      ]
+    })}
+  </script>
+</Helmet>
+
       {/* Breadcrumbs */}
       <div className="bg-stone-50 border-b border-stone-200 py-4">
         <div className="container mx-auto px-4 max-w-7xl flex items-center text-sm text-stone-500">

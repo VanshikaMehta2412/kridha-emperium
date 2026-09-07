@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -26,14 +27,57 @@ export default function Contact() {
 
   return (
     <>
-      <SEO title="Contact Us" description="Get in touch with Kridha Imperial Homes." />
+      <SEO
+        title="Luxury Home Decor Contact"
+        description="Contact Kridha Imperial Homes for luxury home decor inquiries, product assistance, orders, and home decor customer support."
+      />
+
+      <Helmet>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Luxury Home Decor Contact",
+      "description": "Contact Kridha Imperial Homes for luxury home decor inquiries, product assistance, orders, and home decor customer support.",
+      "url": "https://kridha-emperium.vercel.app/contact",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Kridha Imperial Homes",
+        "url": "https://kridha-emperium.vercel.app/"
+      }
+    })}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kridha-emperium.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact Us",
+          "item": "https://kridha-emperium.vercel.app/contact"
+        }
+      ]
+    })}
+  </script>
+</Helmet>
       
       {/* Page Header */}
       <div className="bg-stone-100 py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl text-stone-900 mb-4">Contact Us</h1>
+          <h1 className="font-serif text-4xl md:text-5xl text-stone-900 mb-4">
+          Luxury Home Decor Contact
+          </h1>
           <p className="text-stone-600 max-w-2xl mx-auto">
-            We are here to assist you with any inquiries about our collections, your orders, or styling advice.
+          Have questions about our luxury home decor collections, orders, or styling advice? Contact Kridha Imperial Homes for home decor customer support and assistance.
           </p>
         </div>
       </div>
@@ -43,21 +87,15 @@ export default function Contact() {
           
           {/* Contact Info */}
           <div>
-            <h2 className="font-serif text-3xl text-stone-900 mb-8">Get in Touch</h2>
+            <h2 className="font-serif text-3xl text-stone-900 mb-8">
+            Home Decor Customer Support
+            </h2>
             <div className="space-y-8">
-              <div>
-                <h3 className="text-lg font-semibold text-stone-900 mb-2 uppercase tracking-wide text-sm">Visit Us (Demo)</h3>
-                <p className="text-stone-600">
-                  123 Imperial Avenue, Luxury District<br />
-                  New Delhi, 110001<br />
-                  India
-                </p>
-              </div>
               <div>
                 <h3 className="text-lg font-semibold text-stone-900 mb-2 uppercase tracking-wide text-sm">Contact Information (Demo)</h3>
                 <p className="text-stone-600">
                   Phone: +91 98765 43210<br />
-                  Email: hello@kridhaimperial.demo
+                  Email: kridha.imperialhomes@gmail.com
                 </p>
               </div>
               <div>

@@ -1,13 +1,52 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 export default function ShippingReturns() {
   return (
     <>
-      <SEO title="Shipping & Returns" description="Shipping and Returns policy for Kridha Imperial Homes." />
+      <SEO
+      title="Home Decor Shipping & Return Policy"
+      description="Learn about home decor shipping, furniture delivery, and the home decor return policy at Kridha Imperial Homes. Review our demo delivery and return guidelines."
+      />
+
+      <Helmet>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Home Decor Shipping & Return Policy",
+      "description": "Learn about home decor shipping, furniture delivery, and the home decor return policy at Kridha Imperial Homes.",
+      "url": "https://kridha-emperium.vercel.app/shipping-returns"
+    })}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kridha-emperium.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Shipping & Returns",
+          "item": "https://kridha-emperium.vercel.app/shipping-returns"
+        }
+      ]
+    })}
+  </script>
+</Helmet>
+
       <div className="container mx-auto px-4 py-16 md:py-24 max-w-4xl">
-        <h1 className="font-serif text-4xl md:text-5xl text-stone-900 mb-8">Shipping & Returns (Demo)</h1>
-        
+        <h1 className="font-serif text-4xl md:text-5xl text-stone-900 mb-8">
+        Home Decor Shipping & Return Policy
+        </h1>
         <div className="prose prose-neutral max-w-none text-stone-600 space-y-6">
           <div className="bg-amber-50 border border-amber-200 p-4 text-amber-900 mb-8 text-center">
             <strong>Notice:</strong> As Kridha Imperial Homes is a fictional demonstration website, no actual products are shipped, and no real returns can be processed. The information below is for layout demonstration purposes only.
@@ -15,7 +54,9 @@ export default function ShippingReturns() {
 
           <div className="grid md:grid-cols-2 gap-12 mt-12">
             <div>
-              <h2 className="font-serif text-2xl text-stone-900 mb-4 border-b border-stone-200 pb-2">Demo Shipping Policy</h2>
+              <h2 className="font-serif text-2xl text-stone-900 mb-4 border-b border-stone-200 pb-2">
+              Home Decor Shipping & Furniture Delivery
+              </h2>
               <ul className="space-y-4 list-disc pl-5">
                 <li><strong>Standard Delivery:</strong> 5-7 business days (Free on orders over ₹10,000)</li>
                 <li><strong>Express Delivery:</strong> 2-3 business days (Flat rate ₹999)</li>
@@ -25,7 +66,9 @@ export default function ShippingReturns() {
             </div>
             
             <div>
-              <h2 className="font-serif text-2xl text-stone-900 mb-4 border-b border-stone-200 pb-2">Demo Return Policy</h2>
+              <h2 className="font-serif text-2xl text-stone-900 mb-4 border-b border-stone-200 pb-2">
+              Home Decor Return Policy
+              </h2>
               <ul className="space-y-4 list-disc pl-5">
                 <li>Items can be returned within 14 days of delivery.</li>
                 <li>Products must be unused, in their original condition, and with all original packaging intact.</li>

@@ -1,5 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 
 export default function About() {
   return (
@@ -8,6 +9,53 @@ export default function About() {
       title="Luxury Home Decor Brand in India"
       description="Learn about Kridha Imperial Homes, a premium home decor brand in India offering elegant and luxury home decor inspired by timeless design."
       />
+
+      <Helmet>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "Luxury Home Decor Brand in India",
+      "description": "Learn about Kridha Imperial Homes, a premium home decor brand in India offering elegant and luxury home decor inspired by timeless design.",
+      "url": "https://kridha-emperium.vercel.app/about",
+      "about": {
+        "@type": "Organization",
+        "name": "Kridha Imperial Homes",
+        "url": "https://kridha-emperium.vercel.app/"
+      }
+    })}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Kridha Imperial Homes",
+      "url": "https://kridha-emperium.vercel.app/"
+    })}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kridha-emperium.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://kridha-emperium.vercel.app/about"
+        }
+      ]
+    })}
+  </script>
+</Helmet>
       
       {/* Hero Section */}
       <div className="relative h-[40vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
@@ -39,7 +87,7 @@ export default function About() {
           <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6 text-center">Our Design Philosophy</h2>
           <div className="w-16 h-px bg-amber-700 mx-auto mb-8"></div>
           <p className="text-stone-600 text-lg leading-relaxed text-center mb-8">
-            At Kridha Imperial Homes, we believe that your living space should be a reflection of your finest tastes. As a premium home decor brand in India, our philosophy is rooted in the pursuit of timeless elegance, blending classic architectural proportions with modern sensibilities. We curate pieces that do more than fill a room; they elevate it, bringing sophistication, warmth, and unmistakable character to every corner.
+            At Kridha Imperial Homes, we believe that your living space should be a reflection of your finest tastes. As a premium home decor brand in India, our philosophy is rooted in the pursuit of timeless elegance, blending classic architectural proportions with modern sensibilities. As a luxury interior decor brand, we curate pieces that do more than fill a room; they elevate it, bringing sophistication, warmth, and unmistakable character to every corner.
           </p>
           <img 
             src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" 
@@ -60,7 +108,7 @@ export default function About() {
           <div>
             <h2 className="font-serif text-3xl text-stone-900 mb-6">Carefully Curated Collections</h2>
             <p className="text-stone-600 leading-relaxed mb-6">
-              Our collections are meticulously sourced to represent the pinnacle of luxury home décor. From hand-knotted Persian heritage rugs to statement marble sculptures, every item in our catalog is chosen for its superior craftsmanship, premium materials, and striking aesthetic appeal.
+              Our collections are meticulously sourced to represent the pinnacle of luxury home decor. From hand-knotted Persian heritage rugs to statement marble sculptures, every item in our catalog is chosen for its superior craftsmanship, premium materials, and striking aesthetic appeal. Our approach to premium home decor in India combines timeless design with carefully selected pieces for sophisticated living spaces.
             </p>
             <p className="text-stone-600 leading-relaxed">
               We strive to offer a cohesive aesthetic—warm, inviting, yet undeniably regal—allowing you to confidently style your home knowing that every piece will harmonize beautifully.

@@ -115,37 +115,61 @@ export default function Products() {
     return result;
   }, [searchQuery, selectedCategory, priceRange, minRating, sortOption]);
 
-  const pageTitle = selectedCategory ? `${selectedCategory} | Kridha Imperial Homes` : 'All Products | Kridha Imperial Homes';
 
   return (
     <>
       <SEO
-      title={
-      selectedCategory
-      ? `${selectedCategory} - Luxury Home Decor Products`
+  title={
+    selectedCategory === "Furniture"
+      ? "Luxury Furniture & Luxury Home Furniture"
+      : selectedCategory === "Lighting"
+      ? "Luxury Wall Lights & Decorative Lighting"
+      : selectedCategory === "Wall Décor"
+      ? "Luxury Wall Decor & Luxury Wall Art"
       : "Home Decor Products"
-      }
-      description="Explore luxury home decor products and home decor items at Kridha Imperial Homes. Discover elegant furniture, lighting, wall decor and premium pieces for stylish homes."
-      />
-      <Helmet>
-      <script type="application/ld+json">
-      {JSON.stringify({
+  }
+  description={
+    selectedCategory === "Furniture"
+      ? "Explore luxury furniture and luxury home furniture at Kridha Imperial Homes. Discover premium and modern furniture pieces designed for elegant and comfortable homes."
+      : selectedCategory === "Lighting"
+      ? "Discover luxury wall lights, decorative lighting and modern home lighting at Kridha Imperial Homes. Explore elegant lighting pieces for stylish and welcoming interiors."
+      : selectedCategory === "Wall Décor"
+      ? "Explore luxury wall decor, elegant wall design and luxury wall art at Kridha Imperial Homes. Discover modern wall decor and decorative wall art for sophisticated interiors."
+      : "Explore luxury home decor products and elegant home decor items at Kridha Imperial Homes. Discover premium home decor products, furniture, lighting and wall decor for stylish homes."
+  }
+/>
+
+<Helmet>
+  <script type="application/ld+json">
+    {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      "name": selectedCategory
-        ? `Luxury ${selectedCategory}`
-        : "Home Decor Products",
-      "description": "Explore luxury home decor products and elegant home decor items at Kridha Imperial Homes.",
+      "name":
+        selectedCategory === "Furniture"
+          ? "Luxury Furniture"
+          : selectedCategory === "Lighting"
+          ? "Luxury Wall Lights & Decorative Lighting"
+          : selectedCategory === "Wall Décor"
+          ? "Luxury Wall Decor & Luxury Wall Art"
+          : "Home Decor Products",
+      "description":
+        selectedCategory === "Furniture"
+          ? "Explore luxury furniture and luxury home furniture at Kridha Imperial Homes."
+          : selectedCategory === "Lighting"
+          ? "Discover luxury wall lights, decorative lighting and modern home lighting at Kridha Imperial Homes."
+          : selectedCategory === "Wall Décor"
+          ? "Explore luxury wall decor, elegant wall design and luxury wall art at Kridha Imperial Homes."
+          : "Explore luxury home decor products, premium home decor products and elegant home decor items at Kridha Imperial Homes.",
       "url": `https://kridha-emperium.vercel.app/products${
         selectedCategory
           ? `?category=${encodeURIComponent(selectedCategory)}`
           : ""
-        }`
-        })}
-      </script>
+      }`
+    })}
+  </script>
 
-      <script type="application/ld+json">
-      {JSON.stringify({
+  <script type="application/ld+json">
+    {JSON.stringify({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -158,9 +182,14 @@ export default function Products() {
         {
           "@type": "ListItem",
           "position": 2,
-          "name": selectedCategory
-            ? `Luxury ${selectedCategory}`
-            : "Home Decor Products",
+          "name":
+            selectedCategory === "Furniture"
+              ? "Luxury Furniture"
+              : selectedCategory === "Lighting"
+              ? "Luxury Wall Lights"
+              : selectedCategory === "Wall Décor"
+              ? "Luxury Wall Decor"
+              : "Home Decor Products",
           "item": `https://kridha-emperium.vercel.app/products${
             selectedCategory
               ? `?category=${encodeURIComponent(selectedCategory)}`
@@ -168,9 +197,9 @@ export default function Products() {
           }`
         }
       ]
-      })}
-      </script>
-      </Helmet>
+    })}
+  </script>
+</Helmet>
       
       {/* Page Header */}
       <div className="bg-stone-100 py-12 md:py-16">

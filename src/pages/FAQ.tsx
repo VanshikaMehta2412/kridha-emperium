@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
+import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { cn } from '../lib/utils';
 
@@ -43,13 +44,56 @@ export default function FAQ() {
 
   return (
     <>
-      <SEO title="FAQ" description="Frequently Asked Questions about Kridha Imperial Homes." />
+      <SEO
+      title="Luxury Home Decor FAQ"
+      description="Find answers to frequently asked questions about Kridha Imperial Homes, luxury home decor products, orders, wishlist, cart, payments, shipping, and returns."
+      />
+
+      <Helmet>
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
+    })}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kridha-emperium.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": "https://kridha-emperium.vercel.app/faq"
+        }
+      ]
+    })}
+  </script>
+</Helmet>
       
       <div className="bg-stone-100 py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="font-serif text-4xl md:text-5xl text-stone-900 mb-4">Frequently Asked Questions</h1>
+          <h1 className="font-serif text-4xl md:text-5xl text-stone-900 mb-4">
+          Luxury Home Decor FAQ
+          </h1>
           <p className="text-stone-600 max-w-2xl mx-auto">
-            Find answers to common questions about our fictional demonstration website.
+          Find answers to common questions about our luxury home decor products, orders, wishlist, cart, payments, shipping, and returns.
           </p>
         </div>
       </div>
