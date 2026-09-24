@@ -577,7 +577,7 @@ export const products: Product[] = [
     color: 'Cream',
     availability: 'In Stock',
     careInstructions: 'Machine wash cold on gentle cycle. Tumble dry low.',
-    image: 'https://images.unsplash.com/photo-1600369672770-985fd30004eb?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1625055887171-4a3186a42b39?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     isFeatured: true,
     dateAdded: '2023-11-01'
