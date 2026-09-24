@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Kridha Imperial Homes
 
-# Run and deploy your AI Studio app
+Kridha Imperial Homes is a luxury home decor e-commerce website featuring elegant furniture, decorative lighting, wall decor, and premium home decor products.
 
-This contains everything you need to run your app locally.
+## 🌐 Live Website
 
-View your app in AI Studio: https://ai.studio/apps/e522e544-3951-4a4e-a2ad-df6053eb6c6d
+[Visit Kridha Imperial Homes](https://kridha-emperium.vercel.app/)
 
-## Run Locally
+## 🏠 About the Project
 
-**Prerequisites:**  Node.js
+Kridha Imperial Homes is a modern e-commerce website created to showcase luxury and premium home decor products. The website includes furniture, lighting, wall decor, product details, wishlist, cart, checkout, and customer support pages.
 
+## 🛠️ Technologies Used
 
-1. Install dependencies:
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+
+## ✨ Features
+
+- Luxury home decor product showcase
+- Furniture, lighting and wall decor categories
+- Product details
+- Shopping cart
+- Wishlist
+- Checkout page
+- FAQ section
+- Shipping and return information
+- Responsive design
+
+## 💻 Run Locally
+
+**Prerequisites:** Node.js
+
+1. Clone the repository:
+   `git clone https://github.com/VanshikaMehta2412/kridha-emperium.git`
+
+2. Navigate to the project:
+   `cd kridha-emperium`
+
+3. Install dependencies:
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+
+4. Run the app:
    `npm run dev`
+
+## 🌐 Project Links
+
+- **Live Website:** https://kridha-emperium.vercel.app/
+- **GitHub Repository:** https://github.com/VanshikaMehta2412/kridha-emperium
