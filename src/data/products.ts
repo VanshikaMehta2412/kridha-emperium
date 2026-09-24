@@ -78,7 +78,7 @@ export const products: Product[] = [
     color: 'Rich Walnut',
     availability: 'In Stock',
     careInstructions: 'Dust frequently with a clean, dry, lint-free cloth. Avoid harsh chemicals.',
-    image: 'https://images.unsplash.com/photo-bFeBv86EC-k?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600369672770-985fd30004eb?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2023-11-15'
   },
@@ -577,7 +577,7 @@ export const products: Product[] = [
     color: 'Cream',
     availability: 'In Stock',
     careInstructions: 'Machine wash cold on gentle cycle. Tumble dry low.',
-    image:'https://images.unsplash.com/photo-1600369672770-985fd30004eb?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1600369672770-985fd30004eb?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     isFeatured: true,
     dateAdded: '2023-11-01'
@@ -707,8 +707,7 @@ export const products: Product[] = [
     color: 'Brass',
     availability: 'In Stock',
     careInstructions: 'Wipe clean. Polish occasionally with brass cleaner to maintain shine.',
-    image: 'https://images.unsplash.com/photo-1625055887171-4a3186a42b39?q=80&w=1000&auto=format&fit=crop',
-    additionalImages: [],
+    image: 'https://images.unsplash.com/photo-1581783342308-f792dbdd27c5?q=80&w=1000&auto=format&fit=crop',     additionalImages: [],
     dateAdded: '2024-01-08'
   },
   {
