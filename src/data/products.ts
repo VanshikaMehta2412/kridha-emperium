@@ -78,7 +78,7 @@ export const products: Product[] = [
     color: 'Rich Walnut',
     availability: 'In Stock',
     careInstructions: 'Dust frequently with a clean, dry, lint-free cloth. Avoid harsh chemicals.',
-    image: 'https://images.unsplash.com/photo-1532372576444-eda95521f510?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-bFeBv86EC-k?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2023-11-15'
   },
@@ -143,7 +143,7 @@ export const products: Product[] = [
     color: 'White & Black',
     availability: 'In Stock',
     careInstructions: 'Wipe with a damp cloth and dry immediately.',
-    image: 'https://images.unsplash.com/photo-1595514652410-612660a9f5d7?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-GqBNWly1HHw?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2024-02-01'
   },
@@ -338,7 +338,7 @@ export const products: Product[] = [
     color: 'Blue, Cream, Gold',
     availability: 'In Stock',
     careInstructions: 'Dust lightly with a feather duster. Avoid direct sunlight to prevent fading.',
-    image: 'https://images.unsplash.com/photo-1577083552431-6e5fd01988ec?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-060x5Nx0A3E?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2023-09-10'
   },
@@ -380,7 +380,7 @@ export const products: Product[] = [
     color: 'Black',
     availability: 'In Stock',
     careInstructions: 'Clean with standard glass cleaner.',
-    image: 'https://images.unsplash.com/photo-1618220179428-22790b46a0eb?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-biPbnQPIk0U?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2024-01-20'
   },
@@ -402,7 +402,7 @@ export const products: Product[] = [
     color: 'Champagne & Green',
     availability: 'Few Left',
     careInstructions: 'Dust frames regularly. Clean glass gently.',
-    image: 'https://images.unsplash.com/photo-1580136608260-4ebf15fac379?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-YkZQkHcc96s?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2024-02-28'
   },
@@ -447,7 +447,7 @@ export const products: Product[] = [
     color: 'Grey & Blue',
     availability: 'In Stock',
     careInstructions: 'Vacuum regularly. Spot clean with mild detergent.',
-    image: 'https://images.unsplash.com/photo-1528318269466-6b22c83d6a69?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-NJzwDkx-FxA?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2023-09-05'
   },
@@ -469,7 +469,7 @@ export const products: Product[] = [
     color: 'Black & Cream',
     availability: 'Few Left',
     careInstructions: 'Shedding is normal initially. Vacuum frequently. Rotate occasionally for even wear.',
-    image: 'https://images.unsplash.com/photo-1592398492067-1510444fc27b?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-63mHu0yTOec?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2023-10-25'
   },
@@ -489,7 +489,7 @@ export const products: Product[] = [
     color: 'Champagne Beige',
     availability: 'In Stock',
     careInstructions: 'Vacuum with suction only. Spot clean immediately.',
-    image: 'https://images.unsplash.com/photo-1604147706283-d7119b5b822c?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1625834384234-fd4eb7fe121f?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2024-01-15'
   },
@@ -555,7 +555,7 @@ export const products: Product[] = [
     color: 'Ivory & Gold',
     availability: 'Few Left',
     careInstructions: 'Spot clean only. Do not iron directly on embroidery.',
-    image: 'https://images.unsplash.com/photo-1574366624911-300430f808db?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-fqnHfabltfs?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2023-08-10'
   },
@@ -577,7 +577,7 @@ export const products: Product[] = [
     color: 'Cream',
     availability: 'In Stock',
     careInstructions: 'Machine wash cold on gentle cycle. Tumble dry low.',
-    image: 'https://images.unsplash.com/photo-1580828369019-1813202fc002?q=80&w=1000&auto=format&fit=crop',
+    image:'https://images.unsplash.com/photo-1600369672770-985fd30004eb?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     isFeatured: true,
     dateAdded: '2023-11-01'
@@ -620,7 +620,7 @@ export const products: Product[] = [
     color: 'Neutral Tones',
     availability: 'In Stock',
     careInstructions: 'Remove covers and wash according to specific fabric labels.',
-    image: 'https://images.unsplash.com/photo-1584100936410-b141154c9354?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-b__CsiTdnF8?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2024-03-20'
   },
@@ -707,7 +707,7 @@ export const products: Product[] = [
     color: 'Brass',
     availability: 'In Stock',
     careInstructions: 'Wipe clean. Polish occasionally with brass cleaner to maintain shine.',
-    image: 'https://images.unsplash.com/photo-1602927891396-10705031bce7?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1625055887171-4a3186a42b39?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2024-01-08'
   },
@@ -751,7 +751,7 @@ export const products: Product[] = [
     color: 'Antiqued Silver',
     availability: 'In Stock',
     careInstructions: 'Wipe wood with dry cloth. Clean mirrors with glass cleaner.',
-    image: 'https://images.unsplash.com/photo-1595526114107-16aca8cc76ee?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-yOgbMODz_7o?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     isFeatured: true,
     dateAdded: '2023-04-10'
@@ -794,7 +794,7 @@ export const products: Product[] = [
     color: 'Champagne Gold',
     availability: 'Few Left',
     careInstructions: 'Clean mirror glass with standard cleaner. Dust frame.',
-    image: 'https://images.unsplash.com/photo-1618220179428-22790b46a0eb?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-qKEhaiVI13U?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     dateAdded: '2023-09-30'
   },
@@ -947,7 +947,7 @@ export const products: Product[] = [
     color: 'White & Gold',
     availability: 'In Stock',
     careInstructions: 'Hand wash recommended to preserve gold rim. Not microwave safe.',
-    image: 'https://images.unsplash.com/photo-1617082729792-74fcc343e0d8?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-wvazaIIsUl8?q=80&w=1000&auto=format&fit=crop',
     additionalImages: [],
     isFeatured: true,
     dateAdded: '2023-03-15'
@@ -1030,7 +1030,7 @@ export const products: Product[] = [
     color: 'Natural Oatmeal',
     availability: 'In Stock',
     careInstructions: 'Machine wash warm. Lay flat to dry. Iron while slightly damp for a crisp look.',
-    image: 'https://images.unsplash.com/photo-1549488344-c71510e19036?q=80&w=1000&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-hC2QBywnLd0?q=80&w=1000&auto=format&fit=crop',  
     additionalImages: [],
     dateAdded: '2024-02-14'
   }
