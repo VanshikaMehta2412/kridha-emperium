@@ -62,11 +62,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   src={product.image}
   alt={product.name}
   className="w-full h-full object-cover"
-  onError={(e) => {
-    e.currentTarget.onerror = null;
-    e.currentTarget.src =
-      'https://images.unsplash.com/photo-1600369672770-985fd30004eb?q=80&w=1000&auto=format&fit=crop';
-  }}
 />
 
         {/* Quick Add to Cart (Desktop Hover) */}
