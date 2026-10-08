@@ -135,8 +135,18 @@ export default function Products() {
       ? "Discover luxury wall lights, decorative lighting and modern home lighting at Kridha Imperial Homes. Explore elegant lighting pieces for stylish and welcoming interiors."
       : selectedCategory === "Wall Décor"
       ? "Explore luxury wall decor, elegant wall design and luxury wall art at Kridha Imperial Homes. Discover modern wall decor and decorative wall art for sophisticated interiors."
-      :"Explore luxury home decor products and elegant home decor items at Kridha Imperial Homes. Discover premium home decor products, furniture, lighting and wall decor for stylish homes."
+      : "Explore luxury home decor products and elegant home decor items at Kridha Imperial Homes. Discover premium home decor products, furniture, lighting and wall decor for stylish homes."
   }
+  keywords={
+    selectedCategory === "Furniture"
+      ? "luxury furniture, luxury home furniture, modern furniture, premium furniture, home furniture"
+      : selectedCategory === "Lighting"
+      ? "luxury wall lights, decorative lighting, modern home lighting, luxury lighting, wall lights"
+      : selectedCategory === "Wall Décor"
+      ? "luxury wall decor, luxury wall art, elegant wall design, modern wall decor, decorative wall art"
+      : "luxury home decor, home decor products, premium home decor, modern home decor, home decor items"
+  }
+  robots="index, follow"
 />
 
 <Helmet>
@@ -205,11 +215,11 @@ export default function Products() {
       <div className="bg-stone-100 py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-3xl md:text-5xl text-stone-900 mb-4">
-          {selectedCategory
-          ? `Luxury ${selectedCategory}`
-          : searchParam
-          ? `Search Results for "${searchParam}"`
-          : "Home Decor Products"}
+            {selectedCategory
+            ? `Luxury ${selectedCategory}`
+            : searchParam
+            ? `Search Results for "${searchParam}"`
+            : "Luxury Home Decor Products"}
           </h1>
           <p className="text-stone-600 max-w-2xl mx-auto">
           {selectedCategory === "Furniture"
@@ -366,6 +376,10 @@ export default function Products() {
 
           {/* Product Grid Area */}
           <div className="flex-grow">
+            
+            <h2 className="sr-only">
+              Luxury Home Decor Products Collection
+            </h2>
             
             {/* Desktop Sort */}
             <div className="hidden md:flex justify-between items-center mb-8 border-b border-stone-200 pb-4">
