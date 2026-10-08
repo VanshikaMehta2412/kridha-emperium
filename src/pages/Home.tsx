@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import ProductCard from '../components/ProductCard';
 import { getCategories, getFeaturedProducts } from '../data/products';
@@ -9,7 +9,6 @@ import { Helmet } from 'react-helmet-async';
 export default function Home() {
   const categories = getCategories();
   const featuredProducts = getFeaturedProducts();
-  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
 
@@ -26,8 +25,10 @@ export default function Home() {
   return (
     <>
       <SEO
-         title="Luxury Home Decor & Modern Home Decor"
-         description="Discover luxury home decor and modern home decor pieces at Kridha Imperial Homes. Explore elegant furniture, decorative lighting, wall decor and premium home decor for stylish living spaces."/>
+      title="Luxury Home Decor & Modern Home Decor"
+      description="Shop luxury home decor, modern furniture, premium home accessories, decorative lighting and elegant wall decor at Kridha Imperial Homes."
+      robots="index, follow"
+      />
       
       <Helmet>
       <script type="application/ld+json">
@@ -52,7 +53,7 @@ export default function Home() {
             Luxury Home Decor<br/>For Modern Homes
             </h1>
             <p className="text-stone-500 text-lg mb-10 leading-relaxed max-w-lg">
-            Discover luxury home decor and modern home decor pieces at Kridha Imperial Homes. Explore luxury home decor products designed to bring sophistication, warmth, and character to every corner of your home.
+            Discover luxury home decor and modern home decor pieces at Kridha Imperial Homes. Explore premium furniture, elegant lighting, decorative wall decor and stylish home accessories designed for modern living spaces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
@@ -114,7 +115,9 @@ export default function Home() {
       {/* Featured Categories */}
       <section className="py-20 md:py-28 container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-4">Curated Categories</h2>
+          <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-4">
+            Luxury Home Decor Categories
+          </h2>
           <div className="w-16 h-px bg-amber-700 mx-auto"></div>
         </div>
         
@@ -128,7 +131,7 @@ export default function Home() {
               <div className="absolute inset-0 z-0">
                 <img 
                   src={category.image} 
-                  alt={category.name} 
+                  alt={`${category.name} luxury home decor collection`}
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 filter brightness-[0.7] group-hover:brightness-[0.6]"
                 />
               </div>
@@ -155,7 +158,7 @@ export default function Home() {
           <div className="h-[500px] md:h-auto">
             <img 
               src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop" 
-              alt="Luxury home decor Imperial Collection" 
+              alt="Luxury home decor Imperial Collection featuring premium furniture and elegant interiors" 
               className="w-full h-full object-cover"
             />
           </div>
@@ -163,7 +166,9 @@ export default function Home() {
             <span className="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-4 block">Premium Selection</span>
             <h2 className="font-serif text-4xl md:text-5xl mb-6">The Imperial Collection</h2>
             <p className="text-stone-400 leading-relaxed mb-10 max-w-md">
-            A meticulously curated selection of luxury home decor pieces and premium home decor products, featuring hand-crafted furniture, decorative lighting, artisanal wall decor, and exclusive designs for modern homes.
+              A meticulously curated selection of luxury home decor and premium home decor products,
+              featuring handcrafted furniture, decorative lighting, elegant wall decor and stylish
+              home accessories for modern homes.
             </p>
             <Link 
               to="/products" 
@@ -179,7 +184,9 @@ export default function Home() {
       <section className="py-20 md:py-28 container mx-auto px-4 max-w-7xl">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-4">Featured Pieces</h2>
+            <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-4">
+              Featured Luxury Home Decor
+            </h2>
             <div className="w-16 h-px bg-amber-700"></div>
           </div>
           <Link to="/products" className="hidden md:inline-flex items-center text-stone-900 hover:text-amber-700 font-medium text-sm uppercase tracking-wider transition-colors">
@@ -203,6 +210,15 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="bg-stone-50 py-20 border-y border-stone-200">
         <div className="container mx-auto px-4 max-w-7xl">
+          <div className="text-center mb-12">
+            <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-4">
+              Why Choose Our Luxury Home Decor
+            </h2>
+            <p className="text-stone-500 max-w-2xl mx-auto leading-relaxed">
+              Discover premium home decor, luxury furniture and elegant home accessories designed for comfortable and modern living spaces.
+            </p>
+          </div>
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-stone-100 mb-4 text-amber-700">
@@ -245,9 +261,11 @@ export default function Home() {
 
       {/* Newsletter */}
       <section className="py-20 md:py-28 container mx-auto px-4 max-w-4xl text-center">
-        <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-4">Join the Imperial Circle</h2>
+        <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-4">
+          Luxury Home Decor Inspiration & Updates
+        </h2>
         <p className="text-stone-600 mb-10 max-w-xl mx-auto">
-          Subscribe to our newsletter to receive updates on new arrivals, exclusive design tips, and early access to curated collections.
+          Subscribe for luxury home decor inspiration, new arrivals, exclusive design tips and early access to our curated home decor collections.
         </p>
         
         {subscribed ? (
