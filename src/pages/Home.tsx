@@ -27,6 +27,7 @@ export default function Home() {
       <SEO
       title="Luxury Home Decor & Modern Home Decor"
       description="Shop luxury home decor, modern furniture, premium home accessories, decorative lighting and elegant wall decor at Kridha Imperial Homes."
+      keywords="luxury home decor, modern home decor, luxury furniture, premium home accessories, decorative lighting, elegant wall decor, home decor products"
       robots="index, follow"
       />
       

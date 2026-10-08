@@ -4,17 +4,28 @@ import { Helmet } from 'react-helmet-async';
 interface SEOProps {
   title: string;
   description: string;
+  keywords?: string;
+  robots?: string;
   type?: string;
   name?: string;
 }
 
-export default function SEO({ title, description, type = 'website', name = 'Kridha Imperial Homes' }: SEOProps) {
+export default function SEO({
+  title,
+  description,
+  keywords,
+  robots = 'index, follow',
+  type = 'website',
+  name = 'Kridha Imperial Homes'
+}: SEOProps) {
   const canonicalUrl = `${window.location.origin}${window.location.pathname}${window.location.search}`;
 
   return (
     <Helmet>
       <title>{title} | {name}</title>
       <meta name='description' content={description} />
+      {keywords && <meta name='keywords' content={keywords} />}
+      <meta name='robots' content={robots} />
 
       <link rel='canonical' href={canonicalUrl} />
 
