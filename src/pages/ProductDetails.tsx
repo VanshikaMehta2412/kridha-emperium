@@ -202,7 +202,7 @@ export default function ProductDetails() {
                   >
                     <img
                       src={img}
-                      alt={`${product.name} thumbnail ${idx + 1}`}
+                      alt={`${product.name} - ${product.category} view ${idx + 1} | Kridha Imperial Homes`}
                       className="w-full h-full object-cover"
                     />
                   </button>
