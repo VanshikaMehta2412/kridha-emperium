@@ -146,6 +146,13 @@ export default function Products() {
       ? "luxury wall decor, luxury wall art, elegant wall design, modern wall decor, decorative wall art"
       : "luxury home decor, home decor products, premium home decor, modern home decor, home decor items"
   }
+
+  canonicalUrl={`https://kridha-emperium.vercel.app/products${
+  selectedCategory
+    ? `?category=${encodeURIComponent(selectedCategory)}`
+    : ''
+  }`}
+
   robots="index, follow"
 />
 
