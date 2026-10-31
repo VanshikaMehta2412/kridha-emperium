@@ -88,8 +88,8 @@ export default function ProductDetails() {
     <>
       <SEO
         title={`${product.name} | Luxury ${product.category}`}
-        description={`${product.shortDescription} Shop ${product.name}, a premium ${product.category.toLowerCase()} piece from Kridha Imperial Homes.`}
-        keywords={`${product.name}, luxury ${product.category.toLowerCase()}, premium ${product.category.toLowerCase()}, luxury home decor, Kridha Imperial Homes`}
+        description={`${product.shortDescription} Explore ${product.name}, a ${product.category.toLowerCase()} design featured on the Kridha Imperial Homes demo website.`}
+        keywords={`${product.name}, luxury ${product.category.toLowerCase()}, premium ${product.category.toLowerCase()}, luxury home decor`}
         canonicalUrl={`https://kridha-emperium.vercel.app/product/${product.id}`}
         image={product.image}
         robots="index, follow"

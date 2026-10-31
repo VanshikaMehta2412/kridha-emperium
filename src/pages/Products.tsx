@@ -131,31 +131,35 @@ export default function Products() {
     <>
       <SEO
         title={
-          selectedCategory === "Furniture"
-            ? "Luxury Furniture & Luxury Home Furniture"
-            : selectedCategory === "Lighting"
-              ? "Luxury Wall Lights & Decorative Lighting"
-              : selectedCategory === "Wall Décor"
-                ? "Luxury Wall Decor & Luxury Wall Art"
-                : "Home Decor Products"
+          searchParam
+            ? `Search Results for ${searchParam}`
+            : selectedCategory === "Furniture"
+              ? "Luxury Furniture for Modern Homes"
+              : selectedCategory === "Lighting"
+                ? "Luxury Decorative Lighting"
+                : selectedCategory === "Wall Décor"
+                  ? "Luxury Wall Décor & Wall Art"
+                  : "Luxury Home Decor Products"
         }
         description={
-          selectedCategory === "Furniture"
-            ? "Explore luxury furniture and luxury home furniture at Kridha Imperial Homes. Discover premium and modern furniture pieces designed for elegant and comfortable homes."
-            : selectedCategory === "Lighting"
-              ? "Discover luxury wall lights, decorative lighting and modern home lighting at Kridha Imperial Homes. Explore elegant lighting pieces for stylish and welcoming interiors."
-              : selectedCategory === "Wall Décor"
-                ? "Explore luxury wall decor, elegant wall design and luxury wall art at Kridha Imperial Homes. Discover modern wall decor and decorative wall art for sophisticated interiors."
-                : "Explore luxury home decor products and elegant home decor items at Kridha Imperial Homes. Discover premium home decor products, furniture, lighting and wall decor for stylish homes."
+          searchParam
+            ? `Explore home decor products matching "${searchParam}" on the Kridha Imperial Homes demo website.`
+            : selectedCategory === "Furniture"
+              ? "Explore luxury furniture and modern home furniture designed for elegant, comfortable and stylish interiors."
+              : selectedCategory === "Lighting"
+                ? "Discover decorative lighting, luxury wall lights and modern lighting for elegant home interiors."
+                : selectedCategory === "Wall Décor"
+                  ? "Explore luxury wall decor, decorative wall art and elegant wall designs for modern interiors."
+                  : "Explore luxury home decor products, premium furniture, decorative lighting and elegant wall decor."
         }
         keywords={
           selectedCategory === "Furniture"
-            ? "luxury furniture, luxury home furniture, modern furniture, premium furniture, home furniture"
+            ? "luxury furniture, modern furniture, premium furniture, home furniture"
             : selectedCategory === "Lighting"
-              ? "luxury wall lights, decorative lighting, modern home lighting, luxury lighting, wall lights"
+              ? "decorative lighting, luxury wall lights, modern home lighting"
               : selectedCategory === "Wall Décor"
-                ? "luxury wall decor, luxury wall art, elegant wall design, modern wall decor, decorative wall art"
-                : "luxury home decor, home decor products, premium home decor, modern home decor, home decor items"
+                ? "luxury wall decor, luxury wall art, modern wall decor"
+                : "luxury home decor, premium home decor, modern home decor, home decor products"
         }
         canonicalUrl={`https://kridha-emperium.vercel.app/products${
           selectedCategory
