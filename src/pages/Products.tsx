@@ -163,12 +163,16 @@ export default function Products() {
                 ? "luxury wall decor, luxury wall art, modern wall decor"
                 : "luxury home decor, premium home decor, modern home decor, home decor products"
         }
-        canonicalUrl={`https://kridha-emperium.vercel.app/products${
-          selectedCategory
-            ? `?category=${encodeURIComponent(selectedCategory)}`
-            : ""
-        }`}
-        robots="index, follow"
+        canonicalUrl={
+          searchParam
+            ? "https://kridha-emperium.vercel.app/products"
+            : `https://kridha-emperium.vercel.app/products${
+                selectedCategory
+                  ? `?category=${encodeURIComponent(selectedCategory)}`
+                  : ""
+              }`
+        }
+        robots={searchParam ? "noindex, follow" : "index, follow"}
       />
 
       <Helmet>
@@ -249,7 +253,7 @@ export default function Products() {
           </h1>
           <p className="text-stone-600 max-w-2xl mx-auto">
             {selectedCategory === "Furniture"
-              ? "Explore luxury furniture and luxury home furniture designed to bring elegance, comfort and sophistication to every corner of your home."
+              ? "Browse a curated range of furniture, decorative lighting, wall art and stylish home accessories for modern interiors."
               : selectedCategory === "Lighting"
                 ? "Discover luxury wall lights, decorative lighting and modern home lighting designed to create an elegant and welcoming atmosphere."
                 : selectedCategory === "Wall Décor"
@@ -467,9 +471,9 @@ export default function Products() {
               </div>
             ) : (
               <div className="py-20 text-center border border-stone-200 bg-stone-50">
-                <h3 className="font-serif text-2xl text-stone-900 mb-2">
-                  No products found.
-                </h3>
+                <h2 className="font-serif text-2xl text-stone-900 mb-2">
+                  No Products Found
+                </h2>
                 <p className="text-stone-500 mb-6">
                   We couldn't find any items matching your current filters.
                 </p>
