@@ -1,13 +1,14 @@
 import React from "react";
 import SEO from "../components/SEO";
+import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
 export default function About() {
   return (
     <>
       <SEO
-        title="About Kridha Imperial Homes | Luxury Home Decor"
-        description="Discover the design philosophy behind Kridha Imperial Homes, a luxury home decor demo project featuring elegant furniture, decorative lighting and modern interiors."
+        title="About Us | Luxury Home Decor & Interior Design | Kridha Imperial Homes"
+        description="Learn about the design philosophy of Kridha Imperial Homes, a luxury home decor demonstration project focused on elegant furniture, decorative lighting and modern interior decor."
         canonicalUrl="https://kridha-emperium.vercel.app/about"
         robots="index, follow"
       />
@@ -19,7 +20,7 @@ export default function About() {
             "@type": "AboutPage",
             name: "About Kridha Imperial Homes | Luxury Home Decor",
             description:
-              "Learn about Kridha Imperial Homes, a premium home decor brand in India offering elegant and luxury home decor inspired by timeless design.",
+              "Learn about Kridha Imperial Homes, a fictional luxury home decor demonstration project created for digital marketing and SEO practice, featuring elegant furniture, decorative lighting and modern interior design.",
             url: "https://kridha-emperium.vercel.app/about",
             about: {
               "@type": "Organization",
@@ -65,7 +66,7 @@ export default function About() {
         <div className="absolute inset-0 z-0">
           <img
             src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=2000&auto=format&fit=crop"
-            alt="Luxurious interior"
+            alt="Luxury modern living room interior with elegant furniture and home decor"
             className="w-full h-full object-cover filter brightness-[0.6]"
           />
         </div>
@@ -90,6 +91,27 @@ export default function About() {
           </p>
         </div>
 
+        <div className="text-center mb-16">
+          <p className="text-stone-600 leading-relaxed mb-4">
+            Explore our collections of elegant furniture, decorative lighting
+            and stylish home accessories for modern interiors.
+          </p>
+          <div className="flex justify-center gap-6 flex-wrap">
+            <Link
+              to="/products"
+              className="text-amber-800 underline underline-offset-4 hover:text-amber-600"
+            >
+              Explore Our Products
+            </Link>
+            <Link
+              to="/"
+              className="text-amber-800 underline underline-offset-4 hover:text-amber-600"
+            >
+              Visit Homepage
+            </Link>
+          </div>
+        </div>
+
         {/* Section 1 */}
         <section className="mb-20">
           <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-6 text-center">
@@ -98,16 +120,17 @@ export default function About() {
           <div className="w-16 h-px bg-amber-700 mx-auto mb-8"></div>
           <p className="text-stone-600 text-lg leading-relaxed text-center mb-8">
             At Kridha Imperial Homes, we believe that your living space should
-            be a reflection of your finest tastes. As a premium home decor brand
-            in India, our philosophy is rooted in the pursuit of timeless
-            elegance, blending classic architectural proportions with modern
-            sensibilities. As a luxury interior decor brand, we curate pieces
-            that do more than fill a room; they elevate it, bringing
-            sophistication, warmth, and unmistakable character to every corner.
+            be a reflection of your personal style. This demonstration project
+            explores the idea of luxury home decor through timeless elegance,
+            blending classic architectural proportions with modern
+            sensibilities. Its curated collections showcase how furniture,
+            decorative lighting and accessories can bring sophistication, warmth
+            and character to modern interiors.
           </p>
           <img
             src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop"
-            alt="Elegant living room"
+            alt="Elegant living room interior with modern luxury home decor"
+            loading="lazy"
             className="w-full h-[400px] object-cover rounded-sm"
           />
         </section>
@@ -117,7 +140,8 @@ export default function About() {
           <div>
             <img
               src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
-              alt="Carefully curated pieces"
+              alt="Curated furniture and decorative accessories for modern interiors"
+              loading="lazy"
               className="w-full h-auto object-cover rounded-sm shadow-xl"
             />
           </div>
