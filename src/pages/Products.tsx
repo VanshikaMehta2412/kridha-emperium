@@ -176,65 +176,69 @@ export default function Products() {
       />
 
       <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name:
-              selectedCategory === "Furniture"
-                ? "Luxury Furniture"
-                : selectedCategory === "Lighting"
-                  ? "Luxury Wall Lights & Decorative Lighting"
-                  : selectedCategory === "Wall Décor"
-                    ? "Luxury Wall Decor & Luxury Wall Art"
-                    : "Home Decor Products",
-            description:
-              selectedCategory === "Furniture"
-                ? "Explore luxury furniture and luxury home furniture at Kridha Imperial Homes."
-                : selectedCategory === "Lighting"
-                  ? "Discover luxury wall lights, decorative lighting and modern home lighting at Kridha Imperial Homes."
-                  : selectedCategory === "Wall Décor"
-                    ? "Explore luxury wall decor, elegant wall design and luxury wall art at Kridha Imperial Homes."
-                    : "Explore luxury home decor products, premium home decor products and elegant home decor items at Kridha Imperial Homes.",
-            url: `https://kridha-emperium.vercel.app/products${
-              selectedCategory
-                ? `?category=${encodeURIComponent(selectedCategory)}`
-                : ""
-            }`,
-          })}
-        </script>
-
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://kridha-emperium.vercel.app/",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
+        {!searchParam && (
+          <>
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
                 name:
                   selectedCategory === "Furniture"
                     ? "Luxury Furniture"
                     : selectedCategory === "Lighting"
-                      ? "Luxury Wall Lights"
+                      ? "Luxury Wall Lights & Decorative Lighting"
                       : selectedCategory === "Wall Décor"
-                        ? "Luxury Wall Decor"
+                        ? "Luxury Wall Decor & Luxury Wall Art"
                         : "Home Decor Products",
-                item: `https://kridha-emperium.vercel.app/products${
+                description:
+                  selectedCategory === "Furniture"
+                    ? "Explore luxury furniture and luxury home furniture at Kridha Imperial Homes."
+                    : selectedCategory === "Lighting"
+                      ? "Discover luxury wall lights, decorative lighting and modern home lighting at Kridha Imperial Homes."
+                      : selectedCategory === "Wall Décor"
+                        ? "Explore luxury wall decor, elegant wall design and luxury wall art at Kridha Imperial Homes."
+                        : "Explore luxury home decor products, premium home decor products and elegant home decor items at Kridha Imperial Homes.",
+                url: `https://kridha-emperium.vercel.app/products${
                   selectedCategory
                     ? `?category=${encodeURIComponent(selectedCategory)}`
                     : ""
                 }`,
-              },
-            ],
-          })}
-        </script>
+              })}
+            </script>
+
+            <script type="application/ld+json">
+              {JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://kridha-emperium.vercel.app/",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name:
+                      selectedCategory === "Furniture"
+                        ? "Luxury Furniture"
+                        : selectedCategory === "Lighting"
+                          ? "Luxury Wall Lights"
+                          : selectedCategory === "Wall Décor"
+                            ? "Luxury Wall Decor"
+                            : "Home Decor Products",
+                    item: `https://kridha-emperium.vercel.app/products${
+                      selectedCategory
+                        ? `?category=${encodeURIComponent(selectedCategory)}`
+                        : ""
+                    }`,
+                  },
+                ],
+              })}
+            </script>
+          </>
+        )}
       </Helmet>
 
       {/* Page Header */}
@@ -258,7 +262,7 @@ export default function Products() {
                 ? "Discover luxury wall lights, decorative lighting and modern home lighting designed to create an elegant and welcoming atmosphere."
                 : selectedCategory === "Wall Décor"
                   ? "Explore luxury wall decor, elegant wall design and luxury wall art to add sophistication and character to your home."
-                  : "Explore luxury home decor products, premium home decor products and elegant home decor items designed to bring sophistication, warmth and character to every corner of your home."}
+                  : "Browse a curated range of furniture, decorative lighting, wall art and stylish home accessories for modern interiors."}
           </p>
         </div>
       </div>
