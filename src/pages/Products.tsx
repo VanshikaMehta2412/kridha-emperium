@@ -139,7 +139,9 @@ export default function Products() {
                 ? "Luxury Decorative Lighting"
                 : selectedCategory === "Wall Décor"
                   ? "Luxury Wall Décor & Wall Art"
-                  : "Luxury Home Decor Products"
+                  : selectedCategory
+                    ? `Luxury ${selectedCategory} for Modern Homes`
+                    : "Luxury Home Decor Products"
         }
         description={
           searchParam

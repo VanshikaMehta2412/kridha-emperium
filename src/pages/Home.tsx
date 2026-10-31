@@ -26,8 +26,8 @@ export default function Home() {
     <>
       <SEO
         title="Luxury Home Decor & Modern Home Decor"
-        description="Explore luxury home decor, modern furniture, decorative lighting, elegant wall decor and premium home accessories at Kridha Imperial Homes."
-        keywords="luxury home decor, modern home decor, luxury furniture, premium home accessories, decorative lighting, elegant wall decor"
+        description="Explore luxury home decor, modern furniture, decorative lighting, wall decor and stylish home accessories at Kridha Imperial Homes."
+        keywords="luxury home decor, modern home decor, luxury furniture, decorative lighting, wall decor, home accessories, modern interior decor"
         canonicalUrl="https://kridha-emperium.vercel.app/"
         robots="index, follow"
       />
@@ -36,9 +36,16 @@ export default function Home() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Kridha Imperial Homes",
+            "@type": "WebPage",
+            name: "Luxury Home Decor & Modern Home Decor",
             url: "https://kridha-emperium.vercel.app/",
+            description:
+              "Explore luxury home decor, modern furniture, decorative lighting, wall decor and stylish home accessories.",
+            isPartOf: {
+              "@type": "WebSite",
+              name: "Kridha Imperial Homes",
+              url: "https://kridha-emperium.vercel.app/",
+            },
           })}
         </script>
       </Helmet>
@@ -50,7 +57,7 @@ export default function Home() {
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-[1px] bg-amber-600"></div>
               <span className="text-xs uppercase tracking-[0.4em] text-amber-700 font-semibold">
-                Exclusive Collection 2024
+                Curated Home Decor Collection
               </span>
             </div>
             <h1 className="font-serif text-5xl lg:text-6xl leading-[1.1] mb-8 text-stone-900">
@@ -59,10 +66,9 @@ export default function Home() {
               For Modern Homes
             </h1>
             <p className="text-stone-500 text-lg mb-10 leading-relaxed max-w-lg">
-              Discover luxury home decor and modern home decor pieces at Kridha
-              Imperial Homes. Explore premium furniture, elegant lighting,
-              decorative wall decor and stylish home accessories designed for
-              modern living spaces.
+              Explore luxury home decor and modern interior accents, including
+              furniture, decorative lighting, wall decor and stylish home
+              accessories for your living spaces.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -75,7 +81,7 @@ export default function Home() {
                 to="/products?category=Furniture"
                 className="border border-stone-300 text-stone-900 px-10 py-4 text-xs uppercase tracking-widest hover:border-stone-900 transition-colors text-center"
               >
-                Explore Décor
+                Explore Furniture
               </Link>
             </div>
           </div>
@@ -99,7 +105,7 @@ export default function Home() {
                 to="/shipping-returns"
                 className="text-[10px] uppercase tracking-widest text-stone-400 mt-1 hover:text-amber-700 transition-colors"
               >
-                Global Shipping
+                Shipping Demo Policy
               </Link>
             </div>
           </div>
@@ -114,12 +120,12 @@ export default function Home() {
               <span className="text-[10px] uppercase tracking-widest text-amber-700 font-bold mb-2 block">
                 Spotlight
               </span>
-              <h3 className="font-serif text-xl lg:text-2xl mb-4 italic text-stone-900">
+              <h2 className="font-serif text-2xl text-stone-900 mb-2">
                 The Velvet Royal Accent Chair
-              </h3>
+              </h2>
               <p className="text-stone-600 text-sm mb-6">
-                Hand-crafted with heritage wood and premium Italian velvet for
-                unparalleled comfort and class.
+                A statement accent chair designed to bring comfort and timeless
+                style to modern living spaces.
               </p>
               <div className="flex justify-between items-center">
                 <span className="text-lg font-medium text-stone-900">
@@ -156,7 +162,8 @@ export default function Home() {
               <div className="absolute inset-0 z-0">
                 <img
                   src={category.image}
-                  alt={`${category.name} luxury home decor collection`}
+                  alt={`${category.name} collection for modern home interiors`}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 filter brightness-[0.7] group-hover:brightness-[0.6]"
                 />
               </div>
@@ -194,7 +201,8 @@ export default function Home() {
           <div className="h-[500px] md:h-auto">
             <img
               src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1200&auto=format&fit=crop"
-              alt="Luxury home decor Imperial Collection featuring premium furniture and elegant interiors"
+              alt="Modern living room interior with decorative furniture and home styling"
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>
@@ -262,8 +270,7 @@ export default function Home() {
               Why Choose Our Luxury Home Decor
             </h2>
             <p className="text-stone-500 max-w-2xl mx-auto leading-relaxed">
-              Discover premium home decor, luxury furniture and elegant home
-              accessories designed for comfortable and modern living spaces.
+              Explore thoughtfully selected pieces that bring style, comfort and character to modern living spaces.
             </p>
           </div>
 
@@ -394,11 +401,11 @@ export default function Home() {
       {/* Newsletter */}
       <section className="py-20 md:py-28 container mx-auto px-4 max-w-4xl text-center">
         <h2 className="font-serif text-3xl md:text-4xl text-stone-900 mb-4">
-          Luxury Home Decor Inspiration & Updates
+          Home Decor Inspiration & Updates
         </h2>
         <p className="text-stone-600 mb-10 max-w-xl mx-auto">
-          Subscribe for luxury home decor inspiration, new arrivals, exclusive
-          design tips and early access to our curated home decor collections.
+          Explore home styling ideas, furniture collections, decorative lighting
+          and inspiration for modern living spaces.
         </p>
 
         {subscribed ? (
