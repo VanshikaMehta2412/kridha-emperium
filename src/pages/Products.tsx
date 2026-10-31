@@ -145,7 +145,7 @@ export default function Products() {
         }
         description={
           searchParam
-            ? `Explore home decor products matching "${searchParam}" on the Kridha Imperial Homes demo website.`
+            ? `Explore home decor products matching "${searchParam}" at Kridha Imperial Homes.`
             : selectedCategory === "Furniture"
               ? "Explore luxury furniture and modern home furniture designed for elegant, comfortable and stylish interiors."
               : selectedCategory === "Lighting"
@@ -182,22 +182,13 @@ export default function Products() {
               {JSON.stringify({
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
-                name:
-                  selectedCategory === "Furniture"
-                    ? "Luxury Furniture"
-                    : selectedCategory === "Lighting"
-                      ? "Luxury Wall Lights & Decorative Lighting"
-                      : selectedCategory === "Wall Décor"
-                        ? "Luxury Wall Decor & Luxury Wall Art"
-                        : "Home Decor Products",
-                description:
-                  selectedCategory === "Furniture"
-                    ? "Explore luxury furniture and luxury home furniture at Kridha Imperial Homes."
-                    : selectedCategory === "Lighting"
-                      ? "Discover luxury wall lights, decorative lighting and modern home lighting at Kridha Imperial Homes."
-                      : selectedCategory === "Wall Décor"
-                        ? "Explore luxury wall decor, elegant wall design and luxury wall art at Kridha Imperial Homes."
-                        : "Explore luxury home decor products, premium home decor products and elegant home decor items at Kridha Imperial Homes.",
+                name: selectedCategory
+                  ? `Luxury ${selectedCategory}`
+                  : "Luxury Home Decor Products",
+
+                description: selectedCategory
+                  ? `Explore ${selectedCategory.toLowerCase()} at Kridha Imperial Homes, with stylish options for modern home interiors.`
+                  : "Explore luxury home decor products, premium furniture, decorative lighting and elegant wall decor at Kridha Imperial Homes.",
                 url: `https://kridha-emperium.vercel.app/products${
                   selectedCategory
                     ? `?category=${encodeURIComponent(selectedCategory)}`
@@ -220,14 +211,9 @@ export default function Products() {
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name:
-                      selectedCategory === "Furniture"
-                        ? "Luxury Furniture"
-                        : selectedCategory === "Lighting"
-                          ? "Luxury Wall Lights"
-                          : selectedCategory === "Wall Décor"
-                            ? "Luxury Wall Decor"
-                            : "Home Decor Products",
+                    name: selectedCategory
+                      ? `Luxury ${selectedCategory}`
+                      : "Luxury Home Decor Products",
                     item: `https://kridha-emperium.vercel.app/products${
                       selectedCategory
                         ? `?category=${encodeURIComponent(selectedCategory)}`
@@ -245,24 +231,30 @@ export default function Products() {
       <div className="bg-stone-100 py-12 md:py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-serif text-3xl md:text-5xl text-stone-900 mb-4">
-            {selectedCategory === "Furniture"
-              ? "Luxury Furniture for Modern Homes"
-              : selectedCategory === "Lighting"
-                ? "Luxury Decorative Lighting"
-                : selectedCategory === "Wall Décor"
-                  ? "Luxury Wall Décor & Wall Art"
-                  : searchParam
-                    ? `Search Results for "${searchParam}"`
-                    : "Luxury Home Decor Products"}
+            {searchParam
+              ? `Search Results for "${searchParam}"`
+              : selectedCategory === "Furniture"
+                ? "Luxury Furniture for Modern Homes"
+                : selectedCategory === "Lighting"
+                  ? "Luxury Decorative Lighting"
+                  : selectedCategory === "Wall Décor"
+                    ? "Luxury Wall Décor & Wall Art"
+                    : selectedCategory
+                      ? `Luxury ${selectedCategory} for Modern Homes`
+                      : "Luxury Home Decor Products"}
           </h1>
           <p className="text-stone-600 max-w-2xl mx-auto">
-            {selectedCategory === "Furniture"
-              ? "Browse a curated range of furniture, decorative lighting, wall art and stylish home accessories for modern interiors."
-              : selectedCategory === "Lighting"
-                ? "Discover luxury wall lights, decorative lighting and modern home lighting designed to create an elegant and welcoming atmosphere."
-                : selectedCategory === "Wall Décor"
-                  ? "Explore luxury wall decor, elegant wall design and luxury wall art to add sophistication and character to your home."
-                  : "Browse a curated range of furniture, decorative lighting, wall art and stylish home accessories for modern interiors."}
+            {searchParam
+              ? `Explore products matching "${searchParam}" at Kridha Imperial Homes.`
+              : selectedCategory === "Furniture"
+                ? "Explore luxury furniture and modern home furniture for elegant, comfortable interiors."
+                : selectedCategory === "Lighting"
+                  ? "Discover luxury wall lights and decorative lighting for elegant home interiors."
+                  : selectedCategory === "Wall Décor"
+                    ? "Explore luxury wall decor, elegant wall designs and decorative wall art."
+                    : selectedCategory
+                      ? `Explore our ${selectedCategory.toLowerCase()} collection for modern home interiors.`
+                      : "Browse a curated range of furniture, decorative lighting, wall art and stylish home accessories for modern interiors."}
           </p>
         </div>
       </div>

@@ -40,7 +40,7 @@ export const products: Product[] = [
     name: 'Royal Velvet Accent Chair',
     categoryId: 'furniture',
     category: 'Furniture',
-    shortDescription: 'Plush velvet accent chair with golden legs.',
+    shortDescription: 'Luxury velvet accent chair with elegant golden legs for modern living rooms.',
     description: 'Add a touch of royalty to your living space with this plush velvet accent chair. Featuring a gracefully curved backrest, premium high-density foam cushioning, and polished golden electroplated legs, it offers both unparalleled comfort and striking visual appeal. Perfect for living rooms, reading nooks, or as a statement piece in a master bedroom.',
     price: 18999,
     originalPrice: 24999,
